@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff7eb9);
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #ff3b3f;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      color: #ff3b3f;
+      margin-bottom: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .name span {
+      display: inline-block;
+      transition: all 3s ease;
+    }
+
+    .name .murenga {
+      text-decoration: none;
+      position: relative;
+      transition: all 3s ease;
+    }
+
+    .name .moyo {
+      opacity: 0;
+      transform: translateX(10px);
+      display: inline-block;
+      transition: all 3s ease;
+    }
+
+    .name.transition .murenga {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .name.transition .moyo {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .caption {
+      color: #ff3b3f;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    #yesButton {
+      background: #ff3b3f;
+      color: white;
+    }
+
+    #noButton {
+      background: #00a8e8;
+      color: white;
+      position: relative;
+      transition: all 0.5s ease;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="name">
+      Caroline Natasha <span class="murenga">Murenga</span> <span class="moyo">Moyo</span>
+    </div>
+    <h1>Will You Be My Valentine? 🌹</h1>
+    <p class="caption">Bet you can’t press the 'No' button!</p>
+    <button id="yesButton" class="button" onclick="window.location.href='file:///C:/Users/moyot/Documents/poem.html'">Yes</button>
+    <button id="noButton" class="button">No, I Dare You to Click 😏</button>
+  </div>
+
+  <script>
+    const nameContainer = document.querySelector('.name');
+
+    setTimeout(() => {
+      nameContainer.classList.add('transition');
+    }, 5000);
+
+    const noButton = document.getElementById('noButton');
+    noButton.addEventListener('mouseover', () => {
+      const containerRect = noButton.parentElement.getBoundingClientRect();
+      const buttonRect = noButton.getBoundingClientRect();
+
+      const maxX = containerRect.width - buttonRect.width;
+      const maxY = containerRect.height - buttonRect.height;
+
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
+
+      noButton.style.position = 'absolute';
+      noButton.style.left = `${newX}px`;
+      noButton.style.top = `${newY}px`;
+    });
+  </script>
+</body>
+</html>

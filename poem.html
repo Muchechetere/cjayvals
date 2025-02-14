@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Valentine</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff7eb9); /* Matching gradient from the first page */
+      font-family: 'Georgia', serif;
+      text-align: center;
+      color: #fff;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Valentine's Day Heading */
+    .valentine-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ff3b3f; /* Matching red from the first page */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for emphasis */
+    }
+
+    /* Poem Container */
+    .poem {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 90%;
+    }
+
+    /* Video Styling */
+    video {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 500px; /* Limits video width for larger screens */
+      height: auto; /* Maintains aspect ratio */
+    }
+
+    /* Responsive Adjustments for Mobile */
+    @media (max-width: 600px) {
+      .valentine-heading {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+      }
+
+      .poem {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding: 15px;
+      }
+
+      video {
+        width: 100%; /* Full width on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Valentine's Day Heading -->
+  <div class="valentine-heading">Happy Valentine's Day, My Love! 💖</div>
+
+  <!-- Poem Container -->
+  <div class="poem">
+    <p>Roses are red, violets are blue,</p>
+    <p>My heart finds its home, whenever I'm with you.</p>
+    <p>Through life’s highs and lows, come what may,</p>
+    <p>You light up my world in every way. 💖</p>
+    <p>Play the video👇</p>
+  </div>
+
+  <!-- Video -->
+  <video controls>
+    <source src="C:/Users/moyot/Documents/vday.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
